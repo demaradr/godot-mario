@@ -1,13 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742351065
-README.md::TextFile::-1::1742184008::0::1::::<><><>0<>0<><>::
-::res://assets/::1742350725
+::res://::1742701993
+README.md::TextFile/TextFile::-1::1742184008::0::1::::<><><>0<>0<><>::
+::res://assets/::1742702247
+Background.png::CompressedTexture2D::2189332849319673999::1742702247::1742702247::1::::<><><>0<>0<>380c59a5efadb6e2b5ea469da6b3abe7<>res://.godot/imported/Background.png-6d72d35f07f42b3845e8764c552bb4fb.ctex::
 icon.svg::CompressedTexture2D/CompressedTexture2D::5585428997440363800::1742350725::1742351066::1::::<><><>0<>0<>da435f3a0bd232ebe1a21e9a2eae54d2<>res://.godot/imported/icon.svg-56083ea2a1f1a4f1e49773bdc6d7826c.ctex::
 Tile set.png::CompressedTexture2D/CompressedTexture2D::692754516391052880::1742350725::1742351066::1::::<><><>0<>0<>6d45ef575d44abd77d06241d36081073<>res://.godot/imported/Tile set.png-027deec4cc9071c23daf70054c967836.ctex::
 V 2.png::CompressedTexture2D/CompressedTexture2D::8301358566847416604::1742350725::1742351066::1::::<><><>0<>0<>bdcdf5d9b2e7fb3be41e4e266068abf4<>res://.godot/imported/V 2.png-661f0ce0a41c83a6630b3339710ec614.ctex::
 V.png::CompressedTexture2D/CompressedTexture2D::1371167286616689456::1742350725::1742351066::1::::<><><>0<>0<>5b53e3ed56291d1e619ab94d2c190a8e<>res://.godot/imported/V.png-33ad7b2dd659dd883c348d9870d089cb.ctex::
-::res://Scenes/::1742350725
-game.tscn::PackedScene::1810032439235357450::1742350725::0::1::::<><><>0<>0<><>::uid://qcnb6lmmbng8::::res://Scenes/player.tscn<>uid://j4tth6gg65pc::::res://assets/Tile set.png
-player.tscn::PackedScene::1127943006194525353::1742350725::0::1::::<><><>0<>0<><>::uid://dguc8goey0d5i::::res://Scripts/player.gd<>uid://dqjifse21jwo7::::res://assets/V 2.png
-::res://Scripts/::1742350725
-player.gd::GDScript::7621863370155251032::1742350725::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Scenes/::1742702122
+game.tscn::PackedScene::1810032439235357450::1742702122::0::1::::<><><>0<>0<><>::uid://qcnb6lmmbng8::::res://Scenes/player.tscn<>uid://j4tth6gg65pc::::res://assets/Tile set.png
+player.tscn::PackedScene::1127943006194525353::1742702122::0::1::::<><><>0<>0<><>::uid://dguc8goey0d5i::::res://Scripts/player.gd<>uid://dqjifse21jwo7::::res://assets/V 2.png
+::res://Scripts/::1742353692
+player.gd::GDScript::7621863370155251032::1742353692::0::1::::<>CharacterBody2D<><>0<>0<><>::

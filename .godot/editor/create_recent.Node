@@ -1,8 +1,12 @@
 Timer
+DirectionalLight2D
+PointLight2D
+Sprite2D
+ParallaxLayer
+ParallaxBackground
 TileMap
 CollisionShape2D
 StaticBody2D
 Camera2D
 AnimatedSprite2D
 CharacterBody2D
-Sprite2D
