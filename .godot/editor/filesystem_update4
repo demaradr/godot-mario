@@ -1,3 +1,4 @@
 res://Scenes/game.tscn
 res://Scenes/player.tscn
-res://Scripts/player.gd
+res://Scenes/menu.tscn
+res://Scenes/area_2d.gd
