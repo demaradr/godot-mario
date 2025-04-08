@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://dohfbgfek6bt1"]
+
+[ext_resource type="Script" uid="uid://dp32kw70qwvgq" path="res://Scripts/slime.gd" id="1_aiwxb"]
+[ext_resource type="Texture2D" uid="uid://8sqxyfheqytp" path="res://assets/Slime.png" id="1_swwnm"]
+[ext_resource type="PackedScene" uid="uid://dne1go6n2a2kb" path="res://Scenes/killzone.tscn" id="2_aiwxb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aiwxb"]
+atlas = ExtResource("1_swwnm")
+region = Rect2(2, 28, 33, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_paq7w"]
+atlas = ExtResource("1_swwnm")
+region = Rect2(35, 28, 33, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4si1"]
+atlas = ExtResource("1_swwnm")
+region = Rect2(68, 28, 33, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gljc"]
+atlas = ExtResource("1_swwnm")
+region = Rect2(101, 28, 33, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vblni"]
+atlas = ExtResource("1_swwnm")
+region = Rect2(134, 28, 33, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e388w"]
+atlas = ExtResource("1_swwnm")
+region = Rect2(167, 28, 33, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4si1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiwxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_paq7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4si1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5gljc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vblni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e388w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_swwnm"]
+radius = 5.0
+height = 14.7059
+
+[node name="Slime" type="Node2D"]
+script = ExtResource("1_aiwxb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_f4si1")
+autoplay = "default"
+
+[node name="Killzone" parent="." instance=ExtResource("2_aiwxb")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(6, 0)
+scale = Vector2(1.47718, 0.869818)
+shape = SubResource("CapsuleShape2D_swwnm")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(7, 0)
+target_position = Vector2(12, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(7, 0)
+target_position = Vector2(-14, 0)
