@@ -3,3 +3,5 @@ res://Scenes/player.tscn
 res://Scripts/killzone.gd
 res://Scenes/killzone.tscn
 res://Scenes/slime.tscn
+res://Scripts/slime.gd
+res://Scripts/player.gd

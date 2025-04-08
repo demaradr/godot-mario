@@ -43,6 +43,11 @@ func _physics_process(delta: float) -> void:
 	if was_on_floor and !is_on_floor() and velocity.y >=0:
 		can_coyote_jump = true
 		coyote_timer.start()
+
+func _input(event):
+	if event.is_action_released("jump"):
+		if velocity.y < 0.0:
+			velocity.y *= 0.5
 	
 func _on_coyote_timer_timeout() -> void:
 	can_coyote_jump = false
