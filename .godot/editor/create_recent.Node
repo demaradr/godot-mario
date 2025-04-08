@@ -1,9 +1,10 @@
 CollisionShape2D
+Timer
 Area2D
+AnimatedSprite2D
 Button
 VBoxContainer
 MarginContainer
-Timer
 DirectionalLight2D
 PointLight2D
 Sprite2D
@@ -11,4 +12,3 @@ ParallaxLayer
 ParallaxBackground
 TileMap
 StaticBody2D
-Camera2D

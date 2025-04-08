@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://01178eajh4y5"]
+[gd_scene load_steps=12 format=3 uid="uid://01178eajh4y5"]
 
 [ext_resource type="PackedScene" uid="uid://qcnb6lmmbng8" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://6gr8y6722djj" path="res://assets/Background.png" id="1_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://j4tth6gg65pc" path="res://assets/Tile set.png" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://dgnji70ie8g4n" path="res://Scenes/area_2d.gd" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://dne1go6n2a2kb" path="res://Scenes/killzone.tscn" id="5_wowpa"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
@@ -128,10 +129,13 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wowpa"]
 size = Vector2(31, 24)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6g32"]
+size = Vector2(53, 18)
+
 [node name="Game" type="Node2D"]
 
 [node name="WellBackground" type="Sprite2D" parent="."]
-position = Vector2(1, -456)
+position = Vector2(2, -456)
 scale = Vector2(1.032, 1)
 texture = ExtResource("1_wrm1d")
 
@@ -167,5 +171,12 @@ script = ExtResource("4_3dryh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Endlevel1"]
 position = Vector2(176.5, -740)
 shape = SubResource("RectangleShape2D_wowpa")
+
+[node name="Killzone" parent="." instance=ExtResource("5_wowpa")]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(-57, -17)
+shape = SubResource("RectangleShape2D_i6g32")
 
 [connection signal="body_entered" from="Endlevel1" to="Endlevel1" method="_on_body_entered"]
