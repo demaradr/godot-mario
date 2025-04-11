@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://01178eajh4y5"]
+[gd_scene load_steps=12 format=3 uid="uid://01178eajh4y5"]
 
 [ext_resource type="PackedScene" uid="uid://qcnb6lmmbng8" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://6gr8y6722djj" path="res://assets/Background.png" id="1_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://j4tth6gg65pc" path="res://assets/Tile set.png" id="2_qxrlw"]
 [ext_resource type="Script" uid="uid://dgnji70ie8g4n" path="res://Scenes/area_2d.gd" id="4_3dryh"]
+[ext_resource type="PackedScene" uid="uid://cykf4ycd162fc" path="res://Scenes/eyeball.tscn" id="6_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://dohfbgfek6bt1" path="res://Scenes/slime.tscn" id="6_i6g32"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
@@ -143,7 +144,7 @@ layer_0/tile_data = PackedInt32Array(-65528, 65536, 11, -131064, 65536, 11, -196
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
 top_level = true
-position = Vector2(122, -744)
+position = Vector2(72, -28)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -175,5 +176,8 @@ shape = SubResource("RectangleShape2D_wowpa")
 [node name="Slime" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(-93, -6)
 scale = Vector2(1.00395, 1)
+
+[node name="Eyeball" parent="." instance=ExtResource("6_1l0tm")]
+position = Vector2(85, -136)
 
 [connection signal="body_entered" from="Endlevel1" to="Endlevel1" method="_on_body_entered"]

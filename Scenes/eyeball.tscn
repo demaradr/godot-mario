@@ -1,0 +1,104 @@
+[gd_scene load_steps=13 format=3 uid="uid://cykf4ycd162fc"]
+
+[ext_resource type="Script" uid="uid://bsqpih46xqlkc" path="res://Scripts/eyeball.gd" id="1_axe3l"]
+[ext_resource type="Texture2D" uid="uid://8sqxyfheqytp" path="res://assets/Slime.png" id="2_tu7fa"]
+[ext_resource type="PackedScene" uid="uid://dne1go6n2a2kb" path="res://Scenes/killzone.tscn" id="3_qfmiu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axe3l"]
+atlas = ExtResource("2_tu7fa")
+region = Rect2(136, 28, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tu7fa"]
+atlas = ExtResource("2_tu7fa")
+region = Rect2(136, 56, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfmiu"]
+atlas = ExtResource("2_tu7fa")
+region = Rect2(136, 84, 34, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vbnt"]
+atlas = ExtResource("2_tu7fa")
+region = Rect2(6, 28, 35, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xqsw"]
+atlas = ExtResource("2_tu7fa")
+region = Rect2(70, 28, 35, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w21nt"]
+atlas = ExtResource("2_tu7fa")
+region = Rect2(136, 28, 34, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qoau7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axe3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tu7fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfmiu")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vbnt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xqsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w21nt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_swwnm"]
+radius = 5.0
+height = 14.7059
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_axe3l"]
+radius = 59.0762
+
+[node name="Eyeball" type="Node2D"]
+script = ExtResource("1_axe3l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_qoau7")
+animation = &"flying"
+frame = 2
+frame_progress = 0.577703
+
+[node name="Killzone" parent="." instance=ExtResource("3_qfmiu")]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(6, 0)
+scale = Vector2(1.47718, 0.869818)
+shape = SubResource("CapsuleShape2D_swwnm")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+position = Vector2(7, 0)
+target_position = Vector2(12, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+position = Vector2(7, 0)
+target_position = Vector2(-14, 0)
+
+[node name="Detection" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+position = Vector2(6, 0)
+shape = SubResource("CircleShape2D_axe3l")
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
+[connection signal="body_exited" from="Detection" to="." method="_on_detection_body_exited"]
