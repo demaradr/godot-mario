@@ -6,27 +6,27 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aiwxb"]
 atlas = ExtResource("1_swwnm")
-region = Rect2(2, 28, 33, 28)
+region = Rect2(16, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_paq7w"]
 atlas = ExtResource("1_swwnm")
-region = Rect2(35, 28, 33, 28)
+region = Rect2(48, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4si1"]
 atlas = ExtResource("1_swwnm")
-region = Rect2(68, 28, 33, 28)
+region = Rect2(80, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5gljc"]
 atlas = ExtResource("1_swwnm")
-region = Rect2(101, 28, 33, 28)
+region = Rect2(112, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vblni"]
 atlas = ExtResource("1_swwnm")
-region = Rect2(134, 28, 33, 28)
+region = Rect2(144, 32, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e388w"]
 atlas = ExtResource("1_swwnm")
-region = Rect2(167, 28, 33, 28)
+region = Rect2(176, 32, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_f4si1"]
 animations = [{
@@ -51,7 +51,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 6.0
+"speed": 10.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_swwnm"]
@@ -66,8 +66,7 @@ position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_f4si1")
 animation = &"idle"
 autoplay = "default"
-frame = 3
-frame_progress = 0.19136
+frame_progress = 0.629574
 
 [node name="Killzone" parent="." instance=ExtResource("2_aiwxb")]
 

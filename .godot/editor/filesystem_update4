@@ -1,7 +1,5 @@
-res://Scenes/player.tscn
-res://Scenes/eyeball.tscn
-res://Scripts/slime.gd
-res://Scenes/game.tscn
 res://Scenes/slime.tscn
+res://Scenes/game.tscn
+res://Scenes/player.tscn
 res://Scenes/killzone.tscn
-res://Scripts/eyeball.gd
+res://Scenes/eyeball.tscn
