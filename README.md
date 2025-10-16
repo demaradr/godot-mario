@@ -2,6 +2,8 @@
 
 A fast-paced 2D platformer prototype built in Godot 4.4. This is the first game project I tackled, and I developed it side-by-side with my brother. I focused on the gameplay programming while he created the art and pieced together the level layouts. Together we explored what it takes to bring a responsive platformer to life.
 
+![Gameplay Demo](assets/demo.gif)
+
 ## Project Highlights
 - **Responsive player controller** featuring tuned acceleration, a jump cutoff, and generous *coyote time* so jumps feel dependable.
 - **Enemy behaviors** including a ground-based slime that patrols between walls and an airborne eyeball that swoops toward the player when they enter its detection range.
